@@ -1,6 +1,28 @@
-//let cantidadSaludos = parseInt(prompt("ingrese cuantas veces desea ser saludado"))
-//for (let i = 0; i < cantidadSaludos; i++){
-  //  alert("Hola")
+
+// datos de usuario
+const user = "hernandez"
+const pass_cliente = "alan123"
+
+function solicitarDatos (){
+    let usuario = prompt("ingrese su usuario");
+    let password = prompt ("ingrese su password")
+
+if (validarDatos (usuario,password)){
+    alert("bienvenidos a autos hernandez ")
+    
+}else{
+    alert("usuario y o password incorrecto")
+}
+}
+ function validarDatos(usuario,password){
+    if ( usuario === user && password === pass_cliente){
+        return true;
+    } else {
+        return false
+    }
+ } 
+  solicitarDatos()
+
  // variables declaradas según el tipo de auto.
  let vPe = 0;
  let vMed = 0;
@@ -54,4 +76,6 @@ while (cant <= 10)
  cant++;
 }
 promedio = vTotalAcu / vTotal;
-alert("valor promedio registrado por auto es equivalente a pesos: " + promedio);
+alert ( "valor promedio registrado por auto es equivalente a pesos: "  +  promedio ) ;
+
+
