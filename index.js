@@ -2,7 +2,7 @@
 // datos de usuario
 const user = "hernandez"
 const pass_cliente = "alan123"
-
+//
 function solicitarDatos (){
     let usuario = prompt("ingrese su usuario");
     let password = prompt ("ingrese su password")
@@ -12,13 +12,15 @@ if (validarDatos (usuario,password)){
     
 }else{
     alert("usuario y o password incorrecto")
-}
+} 
+
 }
  function validarDatos(usuario,password){
     if ( usuario === user && password === pass_cliente){
         return true;
     } else {
         return false
+       
     }
  } 
   solicitarDatos()
@@ -42,12 +44,12 @@ if (validarDatos (usuario,password)){
  let au;
 //
 let cant = 1;
-while (cant <= 10) 
+while (cant <= 5) 
 {
  let ingreso = false; 
  while (ingreso == false) 
  {
-     au = parseInt(prompt("ingrese tipo de auto(1= pequeño, 2= mediano, 3= grande):"));
+     au = parseInt(prompt("ingrese tipo de auto:\n 1)= pequeño\n 2)= mediano\n 3)= grande"));
      if (au <= 3) {
          ingreso = true;
      }
@@ -72,10 +74,9 @@ while (cant <= 10)
  }
  vTotal = vPe + vMed + vGrand;
  vTotalAcu = vPequeAcu + vMeDAcu + vGrandAcu;
- alert("cantidad de autos ingresados por el momento: " + vTotal + " recaudado: " + vTotalAcu);
+ alert("cantidad de autos ingresados por el momento: " + vTotal + "\n recaudado: " +"$"+ vTotalAcu);
  cant++;
 }
-promedio = vTotalAcu / vTotal;
-alert ( "valor promedio registrado por auto es equivalente a pesos: "  +  promedio ) ;
-
+//promedio = vTotalAcu / vTotal;
+//alert ( "valor promedio registrado por auto es equivalente a pesos: "  +  promedio ) ;
 
